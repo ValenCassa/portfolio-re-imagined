@@ -1,0 +1,31 @@
+.socialButton {
+  margin-top: 0.5em;
+  font-family: "Creato Display";
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+  padding: 0.5em 1em;
+  display: flex;
+  background-color: transparent;
+  transition: background-color 0.1s ease-in;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+
+  span {
+    margin-top: 0.15em;
+    margin-left: 0.5em;
+  }
+}
+
+[data-theme="dark"],
+[data-theme="dark"] body {
+  .socialButton:hover {
+    background-color: white;
+    color: black;
+  }
+}

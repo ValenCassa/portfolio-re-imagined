@@ -1,0 +1,162 @@
+.personalData {
+  display: flex;
+  width: 100%;
+
+  .flexLeft {
+    flex: 50%;
+    width: 50%;
+    margin: auto;
+  }
+
+  .flexRight {
+    position: relative;
+  }
+  h2 {
+    margin: 0;
+
+    @media (max-width: 400px) {
+      font-size: 18px;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-top: 0.1em;
+  }
+}
+
+.borderProfile {
+  position: absolute;
+  right: 0;
+  border-radius: 100%;
+  transform: translateX(2.5%);
+  margin-top: -0.62em;
+  width: 84px;
+  aspect-ratio: 1;
+  background-color: black;
+}
+
+.avatarProfile {
+  position: relative;
+  width: 80px;
+  aspect-ratio: 1;
+  background: url("/img/avatarProfile.png");
+  background-position: contain;
+  border-radius: 100%;
+
+  margin-top: -0.5em;
+  right: 0;
+}
+
+.bioDescription {
+  font-family: "Creato Display" !important;
+  font-size: 17px;
+  line-height: 173%;
+  text-align: justify;
+  font-weight: 300;
+  text-indent: 30px;
+}
+
+.verticalDivider {
+  width: 1px;
+  height: 15px;
+  border-left: 2px solid #1ab0ba;
+  border-radius: 100%;
+}
+
+.bioMargin {
+  position: relative;
+  margin-top: -0.5em;
+}
+
+.bioData {
+  position: relative;
+  margin-left: -0.37em;
+  margin-top: -3.6em;
+}
+
+.bioBox {
+  position: relative;
+  display: flex;
+}
+
+.year {
+  position: absolute;
+  margin-top: -2.1em;
+  margin-left: 1.4em;
+  font-weight: 500;
+}
+
+.processBio {
+  position: relative;
+  margin-top: -2.1em;
+  margin-left: 5em;
+}
+
+.dotBio {
+  position: relative;
+  z-index: -1;
+  margin: 0;
+  font-family: "Creato display";
+  color: black;
+  font-size: 80px;
+  margin-left: -0.01em;
+}
+
+.certificate {
+  position: relative;
+  color: #db6262;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.portfolioButton {
+  font-family: "Creato Display";
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  margin-top: 2em;
+  padding: 1em;
+  width: 100%;
+  border-radius: 7px;
+  background-color: linear-gradient(
+    160.43deg,
+    #f0f0f0 -85.91%,
+    #f1f1f1 147.11%
+  );
+  transition: background-color 0.1s ease-in;
+  cursor: pointer;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+
+  svg {
+    position: absolute;
+    margin-left: 0.5em;
+    margin-top: 0.12em;
+  }
+}
+
+[data-theme="dark"],
+[data-theme="dark"] body {
+  .borderProfile {
+    background-color: white;
+  }
+
+  .dotBio {
+    color: white;
+  }
+
+  .portfolioButton {
+    background-color: black;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}

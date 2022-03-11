@@ -1,0 +1,27 @@
+.dateTitle {
+  margin: 1em 0 0 0;
+  font-size: 17px;
+  font-weight: bold;
+  display: inline-block;
+  border-bottom: 2px solid #db6262;
+}
+
+.dateOpener {
+  font-family: "Creato Display";
+  font-weight: bold;
+  margin-top: 1.25em;
+  border: none;
+  width: 100%;
+  padding: 0.8em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.calendar {
+  transition: opacity 0.2s ease;
+}
+
+.calendar#closedCalendar {
+  pointer-events: none;
+  opacity: 0;
+}

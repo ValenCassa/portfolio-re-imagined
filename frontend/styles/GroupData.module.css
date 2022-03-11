@@ -1,0 +1,16 @@
+.flexData {
+  display: flex;
+  gap: 3em;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+
+  .flexLeft {
+    flex: 50%;
+  }
+
+  .flexRight {
+    flex: 50%;
+  }
+}

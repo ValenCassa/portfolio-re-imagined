@@ -1,0 +1,95 @@
+.cardsWrapper {
+  margin-top: 2em;
+}
+
+.gridCards {
+  display: grid;
+  margin-top: 1em;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  gap: 1em;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.blogDashboard {
+  padding: 0.5em;
+  background: linear-gradient(160.43deg, #f0f0f0 -85.91%, #f1f1f1 147.11%);
+  border-radius: 14px;
+  font-size: 17px;
+  text-align: center;
+  margin: 0 0 0.8em 0;
+
+  span {
+    color: #0e6fe0;
+  }
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+
+  .newButton {
+    flex: 50%;
+    font-family: "Creato Display";
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    margin-top: 0em;
+    padding: 1em;
+    border-radius: 7px;
+    background-color: linear-gradient(
+      160.43deg,
+      #f0f0f0 -85.91%,
+      #f1f1f1 147.11%
+    );
+    transition: background-color 0.1s ease-in;
+    cursor: pointer;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  .deleteButton {
+    flex: 50%;
+    font-family: "Creato Display";
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;
+    background-color: #f14c4c;
+    transition: background-color 0.1s ease-in;
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+      background-color: #900121;
+      color: white;
+    }
+  }
+}
+
+[data-theme="dark"],
+[data-theme="dark"] body {
+  .blogDashboard {
+    background: linear-gradient(160.43deg, #161616 -85.91%, #111111 147.11%);
+  }
+
+  .newButton {
+    background-color: black;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}

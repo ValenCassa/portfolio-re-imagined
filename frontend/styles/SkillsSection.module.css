@@ -1,0 +1,117 @@
+.skillsTitle {
+  display: grid;
+  place-content: center;
+  background: linear-gradient(160.43deg, #f0f0f0 -85.91%, #f1f1f1 147.11%);
+  margin-top: 1em;
+  padding: 0.5em;
+  border-radius: 14px;
+  font-weight: bold;
+
+  p {
+    margin: 0;
+    display: inline-block;
+  }
+
+  .frontend {
+    border-bottom: 2px solid #db6262;
+  }
+
+  .backend {
+    border-bottom: 2px solid #3dabc3;
+  }
+
+  .tests {
+    border-bottom: 2px solid #603dc3;
+  }
+}
+
+.skillsTitle#nextTitle {
+  margin-top: 2em;
+}
+
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em;
+  }
+}
+
+.wrapper {
+  display: grid;
+  place-content: center;
+
+  @media (max-width: 500px) {
+    svg {
+      transform: scale(0.65);
+    }
+  }
+}
+
+.skillsWrapper {
+  margin-top: 1em;
+  border-radius: 14px;
+  width: 115px;
+  height: 112px;
+  background: linear-gradient(238.63deg, #dfdfdf -50.7%, #e8e8e8 93.51%);
+
+  @media (max-width: 500px) {
+    width: 80px;
+    height: 77px;
+  }
+
+  .skillsBody {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skillBox {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    transform: scale(0.9);
+
+    @media (max-width: 500px) {
+      overflow: hidden;
+    }
+  }
+
+  .skillName {
+    font-family: "Creato Display";
+    font-size: 14px;
+    background: rgba(139, 139, 139, 0.6);
+    border-radius: 0 0 14px 14px;
+    display: grid;
+    padding: 0.3em;
+    place-content: center;
+    font-weight: bold;
+    p {
+      margin: 0;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 10px;
+    }
+  }
+}
+
+[data-theme="dark"],
+[data-theme="dark"] body {
+  .skillsTitle {
+    background: linear-gradient(160.43deg, #161616 -85.91%, #111111 147.11%);
+  }
+
+  .skillsWrapper {
+    background: linear-gradient(160.43deg, #161616 -85.91%, #111111 147.11%);
+
+    .skillName {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+}

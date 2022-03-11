@@ -1,0 +1,21 @@
+.backLink {
+  margin-top: 1em;
+  display: inline-block;
+  color: #db6262;
+  font-size: 17px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.arrow {
+  margin: -0.1em 0.5em;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  border-bottom: 2px solid #db6262;
+}

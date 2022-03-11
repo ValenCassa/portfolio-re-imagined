@@ -1,0 +1,55 @@
+.dropzone {
+  background: #cfcfcf;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 7px;
+  margin-top: 1em;
+  width: 100%;
+  height: 120px;
+}
+
+.drop {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.dropContent {
+  text-align: center;
+  p {
+    margin: 0;
+    font-family: "Creato Display";
+    font-weight: bold;
+  }
+}
+
+.dropContent#uploadedImage {
+  display: none;
+}
+
+.success {
+  padding: 0.5em;
+  background: rgba(19, 170, 85, 0.29);
+  color: #13aa55;
+  border-radius: 7px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 0em;
+}
+
+.upload {
+  margin: 1em 0 0 0;
+  font-size: 17px;
+  font-weight: bold;
+  display: inline-block;
+  border-bottom: 2px solid #db6262;
+}
+
+[data-theme="dark"],
+[data-theme="dark"] body {
+  .dropzone {
+    background: #1b1b1b;
+  }
+}

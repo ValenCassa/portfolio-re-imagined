@@ -1,0 +1,15 @@
+.preview {
+  margin-top: 1em;
+
+  .previewTitle {
+    margin: 0;
+    font-size: 17px;
+    font-weight: bold;
+    display: inline-block;
+    border-bottom: 2px solid #db6262;
+  }
+
+  .previewContent {
+    font-family: "Creato Display";
+  }
+}

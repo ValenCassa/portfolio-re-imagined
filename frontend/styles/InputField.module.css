@@ -1,0 +1,30 @@
+.title {
+  margin: 1em 0 0 0;
+  font-size: 17px;
+  font-weight: bold;
+  display: inline-block;
+  border-bottom: 2px solid #db6262;
+}
+
+.input {
+  font-family: "Creato Display";
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  padding: 0.85em;
+  margin-top: 1.2em;
+  background-color: rgb(239, 239, 239);
+  color: black;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+[data-theme="dark"],
+[data-theme="dark"] body {
+  .input {
+    background-color: #1b1b1b;
+    color: white;
+  }
+}

@@ -1,0 +1,1159 @@
+@font-face {
+  font-family: "Creato Display";
+  src: url("/fonts/CreatoDisplay-Regular.woff2") format("woff2"),
+    url("/fonts/CreatoDisplay-Regular.woff") format("woff"),
+    url("/fonts/CreatoDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("/fonts/CreatoDisplay-Bold.woff2") format("woff2"),
+    url("/fonts/CreatoDisplay-Bold.woff") format("woff"),
+    url("/fonts/CreatoDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Creato Display";
+  src: url("/fonts/CreatoDisplay-Light.woff2") format("woff2"),
+    url("/fonts/CreatoDisplay-Light.woff") format("woff"),
+    url("/fonts/CreatoDisplay-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "M PLUS";
+  src: url("/fonts/subset-RoundedMplus1c-Light.woff2") format("woff2"),
+    url("/fonts/subset-RoundedMplus1c-Light.woff") format("woff"),
+    url("/fonts/subset-RoundedMplus1c-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "M PLUS";
+  src: url("/fonts/subset-RoundedMplus1c-Medium.woff2") format("woff2"),
+    url("/fonts/subset-RoundedMplus1c-Medium.woff") format("woff"),
+    url("/fonts/subset-RoundedMplus1c-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "M PLUS";
+  src: url("/fonts/subset-RoundedMplus1c-Bold.woff2") format("woff2"),
+    url("/fonts/subset-RoundedMplus1c-Bold.woff") format("woff"),
+    url("/fonts/subset-RoundedMplus1c-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "M PLUS";
+  src: url("/fonts/subset-RoundedMplus1c-Regular.woff2") format("woff2"),
+    url("/fonts/subset-RoundedMplus1c-Regular.woff") format("woff"),
+    url("/fonts/subset-RoundedMplus1c-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "M PLUS";
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  transition: background 0.15s;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #e7e7e7;
+}
+
+.logoContainer {
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+}
+
+.logoBox {
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  line-height: 20px;
+  padding: 10px;
+
+  img {
+    transition: 200ms ease;
+  }
+
+  &:hover img {
+    transform: rotate(45deg);
+  }
+}
+
+.myName {
+  font-weight: bold;
+  margin-left: 0.2em;
+  letter-spacing: -0.05em;
+  font-size: 18px;
+
+  @media (max-width: 768px) {
+    font-size: 17.2px;
+  }
+}
+
+.toggleButton {
+  background: #685fce;
+  width: 33px;
+  height: 33px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+}
+
+.svg {
+  width: 17px;
+  height: 17px;
+  background-image: url("../public/img/Moon.svg");
+  background-repeat: no-repeat;
+
+  svg {
+    position: absolute;
+    fill: white;
+  }
+}
+
+.childLink {
+  padding: 0.6rem;
+  color: #202020;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.childLink#active {
+  border-bottom: 2px solid #1a9ea7;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 6;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.navContainer {
+  display: flex;
+  padding: 0.5rem 0.4rem;
+  max-width: 57rem;
+  margin: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftNavWrapper {
+  display: flex;
+}
+
+.linkGroup {
+  margin-left: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.githubButton {
+  display: flex;
+  gap: 0.4em;
+
+  .githubIcon {
+    width: 18px;
+    height: 18px;
+    margin-top: 0.08em;
+  }
+}
+
+.rightNavWrapper {
+  display: flex;
+  gap: 0.8em;
+}
+
+.menuRoot {
+  position: relative;
+
+  .menuButton {
+    border: none;
+    text-align: center;
+    padding-bottom: 0.5em;
+    width: 33px;
+    height: 33px;
+    border-radius: 5px;
+    background-color: #e7e7e7;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: bold;
+    display: grid;
+    place-content: center;
+
+    &:hover {
+      background-color: #dadada;
+    }
+
+    &:active {
+      transform: scale(0.92);
+    }
+
+    svg {
+      margin-top: 0.5em;
+    }
+  }
+  .menuBody {
+    opacity: 0;
+    position: absolute;
+    margin: 0.2em -7.5em;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    padding: 0.3em 0.3em;
+    transition: opacity 0.2s;
+    pointer-events: none;
+
+    .menuItem {
+      border-radius: 3px;
+      padding: 0.3em 5em 0.3em 0.7em;
+      transition: all 0.1s ease;
+
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+
+  .menuBody#active {
+    pointer-events: unset;
+    opacity: 1;
+  }
+}
+
+.logOutMenu {
+  font-family: "Creato Display";
+  font-weight: bold;
+  border: none;
+  padding: 0.5em;
+  border-radius: 4px;
+  background: rgba(219, 98, 98, 0.5);
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: rgba(219, 98, 98, 0.8);
+  }
+}
+
+.menuRoot#mobile {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mainSection {
+  padding-bottom: 2rem;
+}
+
+.heroSection {
+  margin-bottom: 2em;
+}
+
+.heroContainer {
+  max-width: 790px;
+  border-radius: 7px;
+  margin: auto;
+}
+
+.bluredContainer {
+  max-width: 640px;
+  border-radius: 7px;
+  margin: auto;
+  position: relative;
+  background: rgba(174, 174, 174, 0.2);
+  backdrop-filter: blur(6px);
+  width: 100%;
+  padding: 1.5em 2.3em;
+  transition: padding 0.2s;
+
+  @media (max-width: 768px) {
+    padding: 1.5em 2em;
+    width: 92%;
+  }
+}
+
+.heroWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.heroContainer#heroRoot {
+  position: relative;
+  margin-top: 5em;
+  width: 100%;
+  background: rgba(174, 174, 174, 0.2);
+  padding: 3.5rem 3rem;
+  z-index: 1;
+  display: flex;
+  transition: margin-top 0.3s;
+  backdrop-filter: blur(6px);
+
+  @media (max-width: 768px) {
+    margin-top: 4em;
+    display: block;
+    width: 95%;
+  }
+}
+
+.heroContainer#background {
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+
+.heroBgDiv {
+  position: absolute;
+}
+
+.heroBgDiv#one {
+  margin-top: 20.5em;
+  margin-left: -1em;
+  z-index: 1;
+}
+
+.heroBgDiv#two {
+  margin-top: 8em;
+  margin-left: 18em;
+  z-index: 2;
+}
+
+.heroBgDiv#three {
+  margin-top: 14em;
+  margin-left: 25em;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    margin-left: 80%;
+  }
+}
+
+.heroBgDiv#four {
+  margin-top: 4.3em;
+  margin-left: 10em;
+  z-index: 1;
+}
+
+.heroBgDiv#five {
+  margin-top: 10em;
+  margin-left: 44em;
+  z-index: 1;
+}
+
+.heroBgDiv#six {
+  margin-top: 22em;
+  margin-left: 80%;
+  z-index: 1;
+}
+
+.heroBgDiv#seven {
+  margin-top: 8em;
+  margin-left: 18em;
+  z-index: 1;
+}
+
+.heroBgDiv#eight {
+  margin-top: 20em;
+  margin-left: 18em;
+  z-index: 1;
+}
+
+.heroBgDiv#nine {
+  margin-top: 20em;
+  margin-left: 18em;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .heroBgDiv#five,
+  .heroBgDiv#eight,
+  .heroBgDiv#nine {
+    display: none;
+  }
+
+  .heroBgDiv#six {
+    margin-top: 21em;
+  }
+}
+
+.textHero {
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 11px;
+  color: #202020;
+}
+
+.boxHero {
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.redDot {
+  color: #db6262 !important;
+}
+
+.divider {
+  margin-top: -1.9em;
+  margin-left: -3em;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #c5c5c5;
+}
+
+.description {
+  margin-top: -0.8em;
+  font-size: 17.5px;
+  font-weight: 300;
+}
+
+.heroRight {
+  margin-top: 1em;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.cardBody {
+  position: absolute;
+  width: 271px;
+  height: 148px;
+  border-radius: 9px;
+  margin-left: 3.5em;
+  margin-top: 2em;
+  z-index: 99;
+  padding: 1em;
+  backdrop-filter: blur(12px);
+  background: rgba(243, 243, 243, 0.6);
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+  animation: float 6s ease-in-out infinite;
+}
+
+.cardHeader {
+  display: flex;
+}
+
+.cardHeaderLeft {
+  display: flex;
+  flex: 50%;
+}
+
+.avatarBorder {
+  position: relative;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin-right: 0.5em;
+}
+
+.avatarTwitter {
+  position: absolute;
+  margin: 0.05em 0.045em;
+  width: 38.7px;
+  height: 38.7px;
+  border-radius: 100%;
+  background: url("../public/img/avatar.png");
+}
+
+.cardHeaderText {
+  margin-top: -0.5em;
+}
+
+.cardText {
+  font-family: "Creato Display";
+}
+
+.username {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 0.9em;
+}
+
+.userlink {
+  font-weight: 300;
+  font-size: 12.5px;
+  letter-spacing: -0.03em;
+  position: absolute;
+  color: #8c8c8c;
+  margin-top: -1.2em;
+}
+
+.followButton {
+  font-family: "Creato Display";
+  font-weight: normal;
+  margin-top: 0.2em;
+  border: none;
+  width: 77px;
+  height: 33px;
+  background-color: #0e6fe0;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: white;
+
+  &:hover {
+    background-color: #055bbf;
+  }
+}
+
+.cardDescription {
+  font-weight: 300;
+  font-size: 14.5px;
+  padding: 0 3px;
+  color: #8c8c8c;
+  margin-top: 0.7em;
+}
+
+.cardFooter {
+  display: flex;
+  gap: 0.5em;
+}
+
+.twitterInfo {
+  font-weight: bold;
+  color: #8c8c8c;
+  font-size: 14px;
+  margin-top: -0.5em;
+  margin-left: 0.2em;
+
+  span {
+    margin-left: 0.2em;
+    font-weight: 400;
+  }
+}
+
+.twitterIcon {
+  position: absolute;
+  right: 0;
+  margin-top: -0.35em;
+  margin-right: 1em;
+}
+
+.gitIcon {
+  cursor: pointer;
+}
+
+.iconBox {
+  position: absolute;
+  width: 47px;
+  height: 50.6px;
+  display: grid;
+  place-content: center;
+  box-shadow: -6px 7px 8px rgba(0, 0, 0, 0.041);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+}
+
+.iconBox#github {
+  background: rgba(255, 255, 255, 0.7);
+  animation: floatIcon 4s ease-in-out infinite;
+
+  svg {
+    margin-right: 0.18em;
+    margin-top: 0.85em;
+  }
+}
+
+.linkedinIcon {
+  margin-top: 5em;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 21.7em;
+}
+
+.iconBox#linkedin {
+  background: linear-gradient(157.45deg, #46bade -25.27%, #4b78ed 126.33%);
+  animation: floatIcon 3s ease-in-out infinite;
+
+  svg {
+    fill: white;
+    margin-top: 0.3em;
+    margin-left: 0.1em;
+  }
+}
+
+.formWrapper {
+  z-index: 999;
+  position: absolute;
+  padding: 0.5em;
+  border-radius: 10px;
+  margin: -3.5em 5em;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(7px);
+  animation: floatIcon 7s ease-in-out infinite;
+
+  label {
+    font-family: "Creato Display";
+    font-weight: normal;
+    margin-left: 0.2em;
+  }
+
+  .submitButton {
+    border: none;
+    display: grid;
+    width: 35px;
+    place-content: center;
+    background: #13aa55;
+    border-radius: 7px;
+    cursor: pointer;
+
+    svg {
+      position: absolute;
+      margin: 0.45em 0.25em;
+      stroke: white;
+    }
+
+    &:disabled {
+      background-color: #424242;
+      cursor: unset;
+    }
+
+    &:active {
+      svg {
+        animation: none;
+      }
+    }
+
+    &:focus {
+      svg {
+        animation: flyMessage 1.5s forwards;
+      }
+    }
+  }
+}
+
+.inputGroup {
+  margin-top: 0.2em;
+  display: flex;
+  gap: 0.7em;
+}
+
+.inputMessage {
+  font-family: "Creato Display";
+  border: none;
+  padding: 0.5em;
+  border-radius: 7px;
+  background-color: white;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.characteres {
+  font-size: 13px;
+  margin-left: 1em;
+  font-weight: 300;
+  color: #858585;
+}
+
+.success {
+  color: #13aa55;
+  font-size: 13px;
+  margin: 0.5em 0 0 0.2em;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+
+  span {
+    color: #db6262 !important;
+  }
+}
+
+.sectionTitle#dashboard {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.react-calendar {
+  z-index: 999;
+  width: 350px;
+  max-width: 100%;
+  background: #cfcfcf;
+  border: 1px solid #a0a096;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+  border: none;
+}
+.react-calendar--doubleView {
+  width: 700px;
+}
+.react-calendar--doubleView .react-calendar__viewContainer {
+  display: flex;
+  margin: -0.5em;
+}
+.react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 50%;
+  margin: 0.5em;
+}
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.react-calendar button {
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+.react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+}
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+}
+.react-calendar__navigation button:disabled {
+  background-color: #f0f0f0;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #e6e6e6;
+}
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+}
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+  color: black;
+}
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+.react-calendar__month-view__days__day--weekend {
+  color: #d10000;
+}
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #757575;
+}
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  padding: 2em 0.5em;
+}
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 6.6667px;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+}
+.react-calendar__tile:disabled {
+  background-color: #f0f0f0;
+}
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #e6e6e6;
+}
+
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: #a9d4ff;
+}
+.react-calendar__tile--active {
+  background: #006edc;
+  color: white;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #1087ff;
+}
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #e6e6e6;
+}
+
+.react-calendar {
+  width: 400px;
+  max-width: 100%;
+  background-color: #fff;
+  color: #222;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+  position: absolute;
+  margin-top: 0.7em;
+}
+.react-calendar__navigation button {
+  color: #6f48eb;
+  min-width: 44px;
+  background: none;
+  font-size: 16px;
+  margin-top: 8px;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #f8f8fa;
+}
+.react-calendar__navigation button[disabled] {
+  background-color: #f0f0f0;
+}
+abbr[title] {
+  text-decoration: none;
+}
+/* .react-calendar__month-view__days__day--weekend {
+  color: #d10000;
+ } */
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background: #f8f8fa;
+  color: #6f48eb;
+  border-radius: 6px;
+}
+.react-calendar__tile--now {
+  background: #6f48eb33;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #6f48eb;
+}
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #6f48eb33;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #6f48eb;
+}
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: #f8f8fa;
+}
+.react-calendar__tile--active {
+  background: #6f48eb;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #6f48eb;
+  color: white;
+}
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #f8f8fa;
+}
+.react-calendar__tile--range {
+  background: #f8f8fa;
+  color: #6f48eb;
+  border-radius: 0;
+}
+.react-calendar__tile--rangeStart {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  background: #6f48eb;
+  color: white;
+}
+.react-calendar__tile--rangeEnd {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background: #6f48eb;
+  color: white;
+}
+
+pre {
+  color: unset;
+  div {
+    background-color: #efefef !important;
+  }
+}
+
+p {
+  a {
+    img {
+      width: 100%;
+      height: 220px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+  }
+}
+
+.markdown {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Creato Display";
+  }
+  max-width: 768px;
+
+  p {
+    font-family: "Creato Display";
+    font-size: 17px;
+    word-break: break-all;
+    white-space: normal;
+  }
+}
+
+code {
+  color: unset;
+}
+
+blockquote {
+  text-align: left;
+  display: inline-block;
+  border-radius: 4px;
+  border-left: 6px solid #e33939;
+  padding: 0.8em 2em 0.8em 0.8em;
+  margin: 0;
+  background-color: white;
+  color: black;
+  font-family: "Creato Display";
+  font-weight: bold;
+
+  p {
+    margin: 0;
+  }
+}
+
+mark {
+  padding: 0.1em 0.3em;
+  background-color: #c197f1;
+  border-radius: 4px;
+}
+
+.buttonRipple {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  border: none;
+  margin: none !important;
+  padding: 0 !important;
+  background: none;
+  text-align: unset;
+  cursor: pointer;
+  transition: background 400ms;
+}
+
+span.ripple {
+  margin-top: -5em;
+  z-index: 9999;
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"],
+[data-theme="dark"] body {
+  background: #121212;
+
+  .toggleButton {
+    background: #f2c498;
+
+    .svg {
+      background-image: url("/img/Sun.svg");
+    }
+  }
+
+  .childLink {
+    color: white;
+  }
+
+  .nav {
+    background: rgba(23, 27, 35, 0.6);
+  }
+
+  .menuBody {
+    background: rgba(0, 0, 0, 0.7);
+
+    .menuItem {
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+  }
+
+  .menuButton {
+    color: white;
+    background: #121212;
+
+    &:hover {
+      background-color: #3e3e3e;
+    }
+  }
+
+  .heroContainer#heroRoot,
+  .bluredContainer {
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  .textHero {
+    color: #e7e7e7;
+  }
+
+  .divider {
+    background-color: #262626;
+  }
+
+  .cardBody {
+    background: rgba(29, 29, 29, 0.6);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .iconBox#github {
+    background: rgba(29, 29, 29, 0.6);
+  }
+
+  .formWrapper {
+    background: #151515;
+
+    .inputMessage {
+      background-color: #0e0e0e;
+    }
+  }
+
+  .react-calendar {
+    background-color: #121212;
+  }
+
+  .react-calendar__month-view__weekdays__weekday {
+    color: white;
+  }
+
+  pre {
+    div {
+      background-color: #1b1b1b !important;
+    }
+  }
+
+  blockquote {
+    background-color: black;
+    color: white;
+  }
+
+  mark {
+    background-color: #5541cd;
+    color: white;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-25px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes floatIcon {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-18px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes flyMessage {
+  50% {
+    transform: translate(210%, -210%);
+    opacity: 0%;
+  }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

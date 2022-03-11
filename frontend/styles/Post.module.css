@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5em;
+  flex-wrap: wrap;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: grid;
+    place-content: center;
+  }
+
+  .badge {
+    padding: 0.2em 0.5em;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 7px;
+    font-family: "Creato Display";
+    font-weight: 300;
+    font-size: 15px;
+    text-align: center;
+
+    @media (max-width: 412px) {
+      font-size: 12px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 9px;
+    }
+  }
+
+  .badge#type {
+    background: rgba(87, 65, 220, 0.3);
+    border: 1px solid #7358de;
+    font-size: 13px;
+  }
+}
+
+[data-theme="dark"],
+[data-theme="dark"] body {
+  .badge {
+    background: rgba(0, 0, 0, 0.43);
+  }
+}

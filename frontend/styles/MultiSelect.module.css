@@ -1,0 +1,7 @@
+.multiTitle {
+  margin: 1em 0 1em 0;
+  font-size: 17px;
+  font-weight: bold;
+  display: inline-block;
+  border-bottom: 2px solid #db6262;
+}
