@@ -1,9 +1,6 @@
 import CreatableSelect from 'react-select/creatable'
 import styles from '../../../styles/MultiSelect.module.css'
 
-const stack = ['NodeJs', 'React']
-
-
 const MultiSelect = ({ options, title, setState, defaultValue}) => {
     return (
         <>

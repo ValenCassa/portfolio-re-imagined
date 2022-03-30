@@ -25,4 +25,6 @@ export const featuredTechOption = [
     { value: 'Typescript', label: 'Typescript' },
     { value: 'MongoDB', label: 'MongoDB' },
     { value: 'SQL', label: 'SQL' },
+    { value: 'Electron', label: 'Electron' },
+    { value: 'CI/CD', label: 'CI/CD' },
 ]

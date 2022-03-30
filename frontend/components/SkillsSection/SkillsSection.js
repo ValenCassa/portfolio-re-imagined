@@ -12,6 +12,7 @@ import GraphQL from '../../public/img/Graph.svg'
 import Jest from '../../public/img/Jest.svg'
 import Cypress from '../../public/img/Cypress.svg'
 import Testing from '../../public/img/Testing.svg'
+import SQL from '../../public/img/SQL.svg'
 
 const SkillsSection = () => {
     return (
@@ -33,7 +34,7 @@ const SkillsSection = () => {
                     </SkillCard>
                     <SkillCard styles={styles} skill={'Typescript'}>
                         <Typescript />
-                    </SkillCard>        
+                    </SkillCard>       
                 </div>
             </div>
 
@@ -53,7 +54,10 @@ const SkillsSection = () => {
                     </SkillCard>
                     <SkillCard styles={styles} skill={'GraphQL'}>
                         <GraphQL />
-                    </SkillCard>        
+                    </SkillCard>
+                    <SkillCard styles={styles} skill={'PostgreSQL'}>
+                        <SQL />
+                    </SkillCard>          
                 </div>
             </div>
 

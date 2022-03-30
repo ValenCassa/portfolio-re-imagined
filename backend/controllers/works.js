@@ -26,7 +26,8 @@ worksRouter.post('/', upload.single('image') , async (req, res) => {
         content: body.content,
         featured,
         featuredTech: body.featuredTech,
-        filename: req.file.filename
+        filename: req.file.filename,
+        repository: body.repository
     })
 
     if (featured) {
@@ -63,7 +64,9 @@ worksRouter.put('/:id', upload.single('image'), async (req, res) => {
         imagePath: req.file?.path || workToUpdate.imagePath,
         content: body.content,
         featured,
-        filename: req.file?.filename || workToUpdate.filename
+        filename: req.file?.filename || workToUpdate.filename,
+        repository: body.repository,
+        featuredTech: body.featuredTech,
     }
     const updatedWork = await Work.findByIdAndUpdate(req.params.id, newWork, { new: true })
 

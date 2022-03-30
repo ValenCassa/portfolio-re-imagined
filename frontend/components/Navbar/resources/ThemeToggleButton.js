@@ -1,6 +1,7 @@
 import { useTheme } from "next-themes"
 import { AnimatePresence, motion } from "framer-motion"
 import { useDarkMode } from "../../../hooks/useDarkMode"
+import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 
 const AnimatedBox = ({ children }) => (
     <motion.div
@@ -18,14 +19,17 @@ const AnimatedBox = ({ children }) => (
 const ThemeToggleButton = () => {
     const { theme, setTheme } = useTheme()
 
-    const onClick = () => setTheme(theme === 'dark' ? 'light': 'dark') 
+    const onClick = () => {
+        setTheme(theme === 'dark' ? 'light': 'dark')
+
+    }
 
     return (
         <AnimatePresence exitBeforeEnter initial={ false }>
             <AnimatedBox>
                 
                 <button className="toggleButton" onClick={onClick}>
-                    <div className="svg"></div>
+                    {theme === 'dark' ? <SunIcon w={'16px'} h={'16px'} /> : <MoonIcon color={'white'} w={'16px'} h={'16px'}/>}
                 </button>
             </AnimatedBox>
         </AnimatePresence>

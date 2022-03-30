@@ -31,6 +31,7 @@
 }
 
 .website {
+  word-wrap: break-word;
   &:hover {
     text-decoration: underline;
   }

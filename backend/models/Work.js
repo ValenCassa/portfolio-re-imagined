@@ -39,6 +39,9 @@ const workSchema = mongoose.Schema({
     },
     filename: {
         type: String
+    },
+    repository: {
+        type: String
     }
 })
 

@@ -31,7 +31,6 @@ const Navbar = () => {
     const { pathname } = useRouter()
     const { logOut } = useContext(UserContext)
     const [session, setSession] = useState(false)
-    const router = useRouter()
 
     useEffect(() => {
         const user = checkCookies('user')
@@ -58,7 +57,7 @@ const Navbar = () => {
                         <LinkItem href='/posts' path={ pathname }>
                             Posts
                         </LinkItem>
-                        <LinkItem href='/twitter.com' path={ pathname } _target='_blank' >
+                        <LinkItem href='https://github.com/ValenCassa/portfolio-re-imagined/' path={ pathname } _target='_blank' >
                             <div className='githubButton'>
                                 <Github className='githubIcon'/>
                                 Source
@@ -95,7 +94,7 @@ const Navbar = () => {
                         <Link className='menuItem' href='/posts' passRef>
                             <a className='menuItem'>Posts</a>
                         </Link>
-                        <Link className='menuItem' href='https://github.com/ValenCassa' passRef>
+                        <Link className='menuItem' href='https://github.com/ValenCassa/portfolio-re-imagined/' passRef>
                             <a className='menuItem'><Github className='githubIcon' style={{ marginRight: '0.4em', transform: 'translateY(0.1em)' }} />Source</a>
                         </Link>
                     </DropdownMenu>

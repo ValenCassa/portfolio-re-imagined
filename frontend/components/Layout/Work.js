@@ -12,7 +12,8 @@ const Badge = ({ children, title }) => {
     )
 }
 
-const Work = ({ value, file, title, platform, stack, website, date, previous, previousLink }) => {
+const Work = ({ value, file, title, platform, stack, website, date, repository, previous, previousLink }) => {
+    
     return (
         <div className={styles.content}>
             {title !== '' && <BackLink previous={previous} href={previousLink} title={title} />}
@@ -20,7 +21,8 @@ const Work = ({ value, file, title, platform, stack, website, date, previous, pr
             {date !== 'Select a date' && <Badge title={'Date'}>{ date }</Badge>}
             {stack.length > 0 && <Badge title={'Stack'}>{ stack.join(', ') }</Badge>}
             {platform.length > 0 && <Badge title={'Platform'}>{ platform.join(', ') }</Badge>}
-            {website !== '' && <Badge title={'Website'}><a href={website} className={styles.website}>{ website }</a></Badge>}
+            {(website !== '' && website !== undefined) && <Badge title={'Website'}><a href={website} className={styles.website}>{ website }</a></Badge>}
+            {(repository !== '' && repository !== undefined) && <Badge title={'Repository'}><a href={repository} className={styles.website}>{ repository }</a></Badge>}
             <div className='markdown'>
                     <Markdown value={value}/>
             </div>

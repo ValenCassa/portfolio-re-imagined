@@ -13,9 +13,6 @@ const App = ({ Component, pageProps }) => {
   const { pathname } = useRouter() 
 
   const routeChange = () => {
-    // Temporary fix to avoid flash of unstyled content
-    // during route transitions. Keep an eye on this
-    // issue and remove this code when resolved
 
     const tempFix = () => {
       const allStyleElems = document.querySelectorAll('style[media="x"]');

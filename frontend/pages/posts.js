@@ -13,7 +13,7 @@ const Posts = ({ posts }) => {
                     <h3 className="sectionTitle">Posts<span>.</span></h3>
                     <div>
                         <div className={styles.cardsContainer}>
-                            {posts.map(post => 
+                            {posts.sort((a, b) => new Date(b.date) - new Date(a.date)).map(post => 
                                 <PostCard post={post} href={`/posts/${post.id}`} key={post.id}/>
                                 )}
                         </div>

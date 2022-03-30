@@ -22,7 +22,8 @@ const UpdateBlog = ({ work }) => {
         date: work.date,
         image: undefined,
         content: work.content,
-        featuredTech: work.featuredTech
+        featuredTech: work.featuredTech,
+        repository: work?.repository
     }
 
     return (
@@ -48,7 +49,7 @@ export const getStaticPaths = async () => {
                 slug: work.id
             }
         })),
-        fallback: false
+        fallback: 'blocking'
     }
 }
 

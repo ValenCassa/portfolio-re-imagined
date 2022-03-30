@@ -1,7 +1,7 @@
 import styles from '../../styles/WorkCard.module.css'
 import Featured from '../../public/img/featured.svg'
 import Link from 'next/link'
-import { SiNodedotjs, SiReact, SiDocker, SiGraphql, SiTypescript, SiMongodb, SiPostgresql } from 'react-icons/si'
+import { SiNodedotjs, SiReact, SiDocker, SiGraphql, SiTypescript, SiMongodb, SiPostgresql, SiElectron, SiGithub } from 'react-icons/si'
 import { IoMdArrowDropright } from 'react-icons/io'
 import { createRipple } from '../utils/createRipple'
 import { useRouter } from 'next/router'
@@ -99,6 +99,8 @@ export const GridWorkCard = ({ date, title, stack, href, featured, deleteable, o
                     {featured === 'Typescript' && <SiTypescript className={styles.techSVG} style={{ fill: 'url(#cardfill)' }} size={160}/>}
                     {featured === 'MongoDB' && <SiMongodb className={styles.techSVG} style={{ fill: 'url(#cardfill)' }} size={160}/>}
                     {featured === 'SQL' && <SiPostgresql className={styles.techSVG} style={{ fill: 'url(#cardfill)' }} size={160}/>}
+                    {featured === 'Electron' && <SiElectron className={styles.techSVG} style={{ fill: 'url(#cardfill)' }} size={160}/>}
+                    {featured === 'CI/CD' && <SiGithub className={styles.techSVG} style={{ fill: 'url(#cardfill)' }} size={160}/>}
                     
                 </div>
 

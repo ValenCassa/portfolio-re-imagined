@@ -144,17 +144,10 @@ body {
   cursor: pointer;
   display: grid;
   place-content: center;
-}
-
-.svg {
-  width: 17px;
-  height: 17px;
-  background-image: url("../public/img/Moon.svg");
-  background-repeat: no-repeat;
 
   svg {
-    position: absolute;
-    fill: white;
+    margin-left: -0.01em;
+    margin-top: 0.07em;
   }
 }
 
@@ -956,7 +949,24 @@ p {
   }
 }
 
+.ReactCollapse--collapse {
+  font-family: "Creato Display";
+  background: #333333;
+  transition: height 500ms !important;
+}
+
+.ReactCollapse--content {
+  padding: 1em;
+  color: white;
+  p {
+    margin: 0;
+  }
+}
+
 .markdown {
+  @media (max-width: 500px) {
+    text-align: justify;
+  }
   h1,
   h2,
   h3,
@@ -964,13 +974,24 @@ p {
   h5 {
     font-family: "Creato Display";
   }
-  max-width: 768px;
 
+  h2 {
+    line-height: 1.5em;
+    border-bottom: 2px rgb(103, 60, 182) solid;
+  }
+
+  h3 {
+    display: inline-block;
+    margin: 0;
+    border-bottom: 2px rgb(94, 148, 185) solid;
+  }
   p {
     font-family: "Creato Display";
     font-size: 17px;
-    word-break: break-all;
+    letter-spacing: 0.025em;
+    line-height: 1.5em;
     white-space: normal;
+    font-weight: normal;
   }
 }
 
@@ -997,7 +1018,7 @@ blockquote {
 
 mark {
   padding: 0.1em 0.3em;
-  background-color: #c197f1;
+  background-color: #97c6f1;
   border-radius: 4px;
 }
 
@@ -1032,8 +1053,10 @@ span.ripple {
   .toggleButton {
     background: #f2c498;
 
-    .svg {
-      background-image: url("/img/Sun.svg");
+    svg {
+      g {
+        stroke: black !important;
+      }
     }
   }
 
@@ -1117,6 +1140,12 @@ span.ripple {
   mark {
     background-color: #5541cd;
     color: white;
+  }
+
+  .markdown {
+    p {
+      color: #e3e3e3;
+    }
   }
 }
 

@@ -17,6 +17,7 @@ const KeyboardShortcuts = () => {
             <p className={styles.shortcut}>Ctrl + i: Italic</p>
             <p className={styles.shortcut}>Ctrl + Enter: Line Break</p>
             <p className={styles.shortcut}>Alt + i: Image</p>
+            <p className={styles.shortcut}>Ctrl + L: Link</p>
         </div>
     )
 }
@@ -29,6 +30,7 @@ const TextArea = ({ onChange, value, setInput }) => {
     useHotkeys('ctrl+i', () => setInput(prevValue => { return {...prevValue, content: value + '*'} }), { enableOnTags: ['TEXTAREA']})
     useHotkeys('alt+i', () => setInput(prevValue => { return {...prevValue, content: value + '[![Foo](url)](link)'} }), { enableOnTags: ['TEXTAREA']})
     useHotkeys('ctrl + enter', () => setInput(prevValue => { return {...prevValue, content: value + lineBreak} }), { enableOnTags: ['TEXTAREA']})
+    useHotkeys('ctrl + l', () => setInput(prevValue => { return {...prevValue, content: value + '[text](link)'} }), { enableOnTags: ['TEXTAREA']})
 
     return (
         <div>

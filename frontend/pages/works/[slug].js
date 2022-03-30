@@ -3,12 +3,13 @@ import { BluredContainer } from "../../components/Layout/Containers"
 import Meta from "../../components/Layout/Meta"
 import {default as WorkLayout} from "../../components/Layout/Work"
 import services from '../../services/works'
+import markdownToTxt from 'markdown-to-txt'
 
 
 const Work = ({ work }) => {
     return (
         <>
-        <Meta title={work.title} description={work.content} image={work.imagePath} />
+        <Meta title={work.title} description={markdownToTxt(work.content)} image={work.imagePath} />
         <Layout title={work.title}>
             <BluredContainer>
                 <WorkLayout 
@@ -19,6 +20,7 @@ const Work = ({ work }) => {
                 stack={work.stack}
                 website={work.website}
                 date={work.date}
+                repository={work?.repository}
                 previous={'Works'}
                 previousLink={'/works'}
                 />

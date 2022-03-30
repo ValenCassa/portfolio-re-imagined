@@ -26,8 +26,8 @@ const CreateUpdate = ({ state, title, defaultStack, defaultPlatform, defaultFeat
         return () => {}
     }, []) //Cleanup function
 
-    const enabledButton = data.stack !== [] && data.platform !== [] && data.website !== '' && data.title !== '' && data.date !== 'Select a date' & data.content !== '' & data.featuredTech !== ''
-    
+    const enabledButton = data.stack !== [] && data.platform !== [] && (data.website !== '' || data.repository !== '') && data.title !== '' && data.date !== 'Select a date' & data.content !== '' && data.featuredTech !== ''
+
     const onSubmit = async (e) => {
         e.preventDefault()
 
@@ -83,8 +83,10 @@ const CreateUpdate = ({ state, title, defaultStack, defaultPlatform, defaultFeat
                         leftItem={<InputField title='Website' value={data.website} onChange={(e) => setData({ ...data, website: e.target.value })}/>}
                         rightItem={ <Select defaultValue={defaultTech} title={'Featured Tech'} options={featuredTechOption} onChange={(value, e) => setData({ ...data, featuredTech: value.value })} /> }
                         />
-                        
+
+                        <InputField title='Repository' value={data.repository} onChange={(e) => setData({ ...data, repository: e.target.value })}/>
                         <InputField title='Title' value={data.title} onChange={(e) => setData({ ...data, title: e.target.value })}/>
+
                     </div>
                     <TextArea value={data.content} onChange={(e) => setData({...data, content: e.target.value})} setInput={setData}/>
                     <SubmitButton condition={enabledButton} title={title} submitted={submitted}/>
@@ -93,7 +95,7 @@ const CreateUpdate = ({ state, title, defaultStack, defaultPlatform, defaultFeat
             </BluredContainer>
 
             <Preview>
-                <Work previous={'Dashboard'} previousLink={'/admin/dashboard'} title={data.title} date={data.date} value={data.content} file={file} platform={data.platform} stack={ data.stack } website={data.website}/>
+                <Work previous={'Dashboard'} previousLink={'/admin/dashboard'} repository={data.repository} title={data.title} date={data.date} value={data.content} file={file} platform={data.platform} stack={ data.stack } website={data.website}/>
             </Preview>
 
         </Layout>

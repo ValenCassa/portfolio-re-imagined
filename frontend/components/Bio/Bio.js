@@ -18,12 +18,12 @@ export const Personal = () => (
     </BluredContainer>
 )
 
-const BioYear = ({ year, children }) => {
+export const BioYear = ({ year, children }) => {
     return (
-        <div className={styles.bioMargin}>
+        <div className={styles.bioMargin} >
             <div className={ styles.verticalDivider }/>
             <div className={styles.bioData}>
-                <span className={styles.dotBio}>.</span><div className={styles.bioBox}><span className={styles.year}>{year}</span><span className={styles.processBio}>{children}</span></div>
+                <span className={styles.dotBio} >.</span><div className={styles.bioBox}><span className={styles.year}>{year}</span><span className={styles.processBio}>{children}</span></div>
             </div>
         </div>
     )
@@ -42,7 +42,7 @@ const BioSection = () => {
                     <BioYear year='2001'>
                         Born in Junin, Buenos Aires, Argentina
                     </BioYear>
-                    <BioYear year='2021'>
+                    <BioYear year='2021' testId={'bioYear'}>
                         Certificate in <a className={styles.certificate} href="https://www.coderhouse.com/certificados/6161e4d95b1b800011c8ebd2?lang=en" target='_blank' rel="noreferrer">Web development</a>
                     </BioYear>
                     <BioYear year='2022'>

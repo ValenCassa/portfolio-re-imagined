@@ -11,7 +11,8 @@ const CreateBlog = () => {
         date: 'Select a date',
         image: null,
         content: '',
-        featuredTech: ''
+        featuredTech: '',
+        repository: '',
     }
 
     return (

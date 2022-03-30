@@ -16,3 +16,31 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+.collapse {
+  font-family: "Creato Display";
+  font-weight: bold;
+  display: flex;
+  margin-top: 0.5em;
+  background-color: #262626;
+  padding: 0.5em 1em;
+  border-radius: 10px 10px 0px 0px;
+  color: white;
+  cursor: pointer;
+
+  p {
+    flex: 80%;
+    margin: 0;
+  }
+
+  svg {
+    display: grid;
+    place-content: center;
+    margin-top: 0.2em;
+    transition: transform 300ms;
+  }
+
+  svg#rotated {
+    transform: rotate(90deg);
+  }
+}

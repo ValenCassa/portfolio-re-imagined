@@ -24,7 +24,7 @@ const DateSelector = ({ date, formatedDate, setDate, setData, data }) => {
         <div>
             <h4 className={styles.dateTitle}>Select date</h4>
             <div className='calendar-container' ref={calendarRef} >
-                <button className={styles.dateOpener}onClick={openCalendar}>{formatedDate}</button>
+                <button className={styles.dateOpener} onClick={openCalendar}>{formatedDate}</button>
                 <div className={styles.calendar} id={active ? undefined : `${styles.closedCalendar}`}>
                     <Calendar onChange={(value, event) => onDate(value, event)} value={date} locale='en'/>
                 </div>

@@ -41,7 +41,7 @@ export const getStaticPaths = async () => {
                 slug: post.id
             }
         })),
-        fallback: false
+        fallback: 'blocking'
     }
 }
 

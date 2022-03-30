@@ -3,11 +3,12 @@ import { BluredContainer } from "../../components/Layout/Containers"
 import Meta from "../../components/Layout/Meta"
 import {default as PostLayout} from '../../components/Layout/Post'
 import services from '../../services/works'
+import markdownToTxt from "markdown-to-txt"
 
 const Post = ({ post }) => {
     return (
         <>
-        <Meta title={post.title} description={post.content} image={post.imagePath} />
+        <Meta title={post.title} description={markdownToTxt(post.content)} image={post.imagePath} />
         <Layout title={post.title}>
             <BluredContainer>
                 <PostLayout 
